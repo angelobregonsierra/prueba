@@ -17,7 +17,7 @@
         die("Hubo un fallo en la conexión: " . mysqli_connect_error());
     }
     echo "Conectados a la base de datos correctamente.";
-    $sql = "CREATE TABLE usuarios (
+    $sql = "CREATE TABLE personas (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
@@ -26,9 +26,9 @@
     )";
 
     if ($conn->query($sql) === TRUE) {
-        echo " La tabla usuarios ha sido creada correctamente.";
+        echo " La tabla personas ha sido creada correctamente.";
     } else {
-        echo " Hubo un error al crear la tabla usuarios: " . $conn->error;
+        echo " Hubo un error al crear la tabla personas: " . $conn->error;
     }
     $conn->close();
     ?>
